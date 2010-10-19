@@ -1,5 +1,5 @@
 module Erector
-  
+
   # A Widget is the center of the Erector universe.
   #
   # To create a widget, extend Erector::Widget and implement the +content+
@@ -40,11 +40,11 @@ module Erector
   # at http://erector.rubyforge.org/userguide#apicheatsheet
   #
   # Now, seriously, after playing around a bit, go read the user guide. It's
-  # fun!  
+  # fun!
   class Widget < AbstractWidget
     include Erector::HTML
     include Erector::Needs
-    include Erector::Caching
+#    include Erector::Caching
     include Erector::Externals
     include Erector::Convenience
     include Erector::JQuery
