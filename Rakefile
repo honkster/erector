@@ -29,7 +29,7 @@ require "erector/version"
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gemspec|
-    gemspec.name = "erector"
+    gemspec.name = "honkster-erector"
     gemspec.summary = "Html Builder library."
     gemspec.email = "erector@googlegroups.com"
     gemspec.description = "Erector is a Builder-like view framework, inspired by Markaby but overcoming some of its flaws. In Erector all views are objects, not template files, which allows the full power of object-oriented programming (inheritance, modular decomposition, encapsulation) in views."
