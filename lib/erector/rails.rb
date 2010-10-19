@@ -13,14 +13,14 @@ module Erector
     # It needs to be there, because erector views are .rb files.
     if config = eval("config if defined? config", binding)
       view_path = config.view_path
-      config.load_paths       << view_path unless config.load_paths.include?(view_path)
+      config.autoload_paths       << view_path unless config.autoload_paths.include?(view_path)
       config.eager_load_paths << view_path unless config.eager_load_paths.include?(view_path)
 
       # Rails probably already ran Initializer#set_load_path and
       # #set_autoload_paths by the time we got here.
       $LOAD_PATH.unshift(view_path) unless $LOAD_PATH.include?(view_path)
-      unless ActiveSupport::Dependencies.load_paths.include?(view_path)
-        ActiveSupport::Dependencies.load_paths << view_path
+      unless ActiveSupport::Dependencies.autoload_paths.include?(view_path)
+        ActiveSupport::Dependencies.autoload_paths << view_path
       end
     end
   end

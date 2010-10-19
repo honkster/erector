@@ -24,7 +24,7 @@ module ActionView #:nodoc:
           "  end",
           template.source,
           "end",
-          "r.to_s",
+          "r.to_html",
         ].join("; ")
       end
     end
